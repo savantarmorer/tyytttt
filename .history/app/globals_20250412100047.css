@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2C5530;
+  --secondary: #8B9D83;
+  --accent: #D4B59E;
+  --text: #333333;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply text-text;
+    font-family: var(--font-montserrat);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition-colors duration-300;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-primary;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold text-primary;
+  }
+
+  .text-content {
+    @apply text-lg leading-relaxed text-text/80;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
